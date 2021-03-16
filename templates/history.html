@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>History</title>
+</head>
+<body>
+<h1>Ticket History</h1>
+<form method="post" action="/history/">
+{% csrf_token %}
+    Section: <select name="section">
+    {% for i in sections %}
+        <option value="{{ i.0 }}">{{ i.1 }}</option>
+    {% endfor %}
+    </select>
+    Day: <select name="day">
+        {% for i in days %}
+        <option value={{ i.0 }}>{{ i.1 }}</option>
+        {% endfor %}
+    </select>
+<input type="submit">
+</form>
+<br/><a href="/">Enter ticket</a>
+</body>
+</html>
