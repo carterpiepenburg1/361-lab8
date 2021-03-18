@@ -12,8 +12,12 @@ class Home(View):
         print(Days.choices)
         #extract form data from POST
         #convert datetime-local string to a Python datetime
-        datetime.strptime('2015-01-02T00:00', '%Y-%m-%dT%H:%M')
+        datetime.strptime('2015-01-02T00:00', '%Y-%m-%dT%H:%M') #replace the first argument
         #instantiate and save a Ticket
+            #to get day of the week, use strftime("%A")
+            #like
+            #a = datetime.now()
+            #print(a.strftime("%A"))
         #render a response, identical to the page rendered by get
         return render(request,"home.html",{"days":Days.choices,"sections":Sections.choices})
 
