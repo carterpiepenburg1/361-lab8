@@ -18,6 +18,8 @@ class Home(View):
             #like
             #a = datetime.now()
             #print(a.strftime("%A"))
+            #also you can use the class Days like a dictionary
+            #print(Days["Monday"]) #prints "M", just like print(Days.Monday)
         #render a response, identical to the page rendered by get
         return render(request,"home.html",{"days":Days.choices,"sections":Sections.choices})
 
