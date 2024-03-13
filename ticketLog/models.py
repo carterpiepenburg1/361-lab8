@@ -21,6 +21,6 @@ class Sections(models.TextChoices):
 class Ticket(models.Model):
     dateTime = models.DateTimeField()
     section = models.CharField(max_length=1, choices=Sections.choices, default=Sections.A)
-    dayOfWeek = models.CharField(max_length=1, choices=Days.choices, default=Days.Monday)
+    dayOfWeek = models.CharField(max_length=50, blank=False)
 
 

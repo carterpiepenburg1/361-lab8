@@ -9,16 +9,16 @@
 <h1>Ticket Information</h1>
 <img src="{% static 'images/image0.png' %}"/>
 <form action="/" method="post">
-{% csrf_token %}
+    {% csrf_token %}
     Section:
     <select name="section">
-    {% for i in sections %}
-        <option value="{{ i.1 }}">{{ i.0 }}</option>
-    {% endfor %}
+        {% for i in sections %}
+            <option value="{{ i.1 }}">{{ i.0 }}</option>
+        {% endfor %}
     </select>
     Date/Time:
-<input name="dateTime" type="datetime-local"/>
-<input type="submit"/>
+    <input name="dateTime" type="datetime-local"/>
+    <input type="submit"/>
 </form>
 <br/><a href="/history">Ticket history</a>
 </body>
